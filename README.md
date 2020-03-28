@@ -1,42 +1,40 @@
 <div dir="rtl">
 
 # InstagramLive-PHP
-اسکریپت PHP برای استریم مستقیم به لایو اینستاگرام از طریح هر برنامه ای که از RTMP پشتیبانی می کند!
+اسکریپت PHP برای استریم مستقیم به لایو اینستاگرام از طریق هر برنامه ای که از RTMP پشتیبانی می کند!
 
 # نکته
 در حال حاضر اجرای این اسکریپت فقط در ویندوز ۱۰ و استریم از طریق OBS تست شده است.
 
 # راه اندازی
-If you are running this after the first setup, work from step six on...
+برای نصب و اجرای این اسکریپت مراحل زیر را طی نمایید...
 
-1. Install PHP, of course...
-2. [Install Composer](https://getcomposer.org/download/)
-3. Clone the Repository
-4. Run ```composer require mgp25/instagram-php react/child-process``` in the cloned folder
-5. Edit the Username and Password inside of `config.php` to your instagram details
-6. Run the `goLive.php` script. (`php -f goLive.php`)
-7. Copy you Stream-URL and Stream-Key and paste them into your streaming software. [See OBS-Setup](https://github.com/JRoy/InstagramLive-PHP#obs-setup)
+1. نصب PHP
+2. [نصب composer](https://getcomposer.org/download/)
+3. دانلود کدها
+4. اجرای ```composer require adrifkat/instagram-api react/child-process``` در پوشه کدهای دریافتی
+5. وارد کردن نام کاربری و کلمه عبور اینستاگرام در فایل `config.php` 
+6. اجرای اسکریپت `goLive.php` از طریق فرمان (`php -f goLive.php`)
+7. کپی Stream-URL و Stream-Key به نرم افزار استریم. [تنظیم OBS](https://greyzusht.com/var/%d8%a7%d8%b3%d8%aa%d8%b1%db%8c%d9%85-%d8%b5%d9%81%d8%ad%d9%87-%d9%86%d9%85%d8%a7%db%8c%d8%b4-%d8%a8%d9%87-%d9%84%d8%a7%db%8c%d9%88-%d8%a7%db%8c%d9%86%d8%b3%d8%aa%d8%a7%da%af%d8%b1%d8%a7%d9%85-%d8%a8/)
 
-# OBS-Setup
-1. Go to the "Stream" section of your OBS Settings 
-2. Set "Stream Type" to "Custom Streaming Server"
-3. Set the "URL" field to the stream url you got from the script
-4. Set the "Stream key" field to the stream key you got from the script
-5. Make Sure "Use Authentication" is **unchecked** and press "OK"
-6. Start Streaming in OBS
-7. To stop streaming, run the "stop" command in your terminal and then press "Stop Streaming" in OBS
-* Note: To emulate the exact content being sent to Instagram, set your OBS canvas size to 720x1280. This can be done by going to Settings->Video and editing Base Canvas Resolution to "720x1280".
+# کانفیگ OBS
+1. به بخش "Stream" در تنظیمات OBS بروید 
+2. "Stream Type" را در حالت "Custom Streaming Server" قرار دهید
+3. در کادر "URL" stream url دریافتی از مرحله قبل را وارد کنید
+4. در کادر "Stream key" کلید دریافتی در مرحله اجرای اسکریپت را وارد کنید
+5. حتما "Use Authentication" در حالت **unchecked** باشد. سپس "OK" را فشار دهید!
+6. روی Start Streaming در OBS کلیک کنید
+7. برای توقف استریم, کلمه "stop" در ترمینالی که اسکریپت را اجرا کرده اید وارد کنید و سپس  "Stop Streaming" در OBS را بزنید
+* نکته: برای نمایش صحیح محتوا در اینستاگرام, در تنظیمات OBS سایز کادر را 720x1280 قرار دهید. برای اینکار به  Settings->Video رفته و رزولوشن را روی  "720x1280" بگذارید.
 
-# FAQ
-#### OBS gives a "Failed to connect" error
-This is mostly due to an invalid stream key: The stream key changes **every** time you start a new stream so it must be replaced in OBS every time.
-#### I've stopped streaming but Instagram still shows me as live
-This is due to you not running the "stop" command inside the script. You cannot just close the command window to make Instagram stop streaming, you must run the stop command in the script. If you *do* close the command window however, start it again and just run the stop command, this should stop Instagram from listing to live content.
-#### I get an error inside of Instagram when archiving my story
-This is usually due to archiving a stream that had no content (video). Just delete the archive and be go on with your day.
+# پرسش‌های متداول
+#### خطای "Failed to connect" 
+کلید استریم دریافتی یکبار مصرف است و برای هر لایو باید یکبار مجددا کلید دریافت نمایید. ضمنا آدرس استریم را بررسی کنید. در صورت بروز مجدد مشکل از rtmps:// به جای rtmp:// و از پورت 443 به جای پورت 80 استفاده کنید.
+#### من استریم را متوقف کردم اما لایو همچنان در جریان است
+برای توقف لایو نیاز است حتما درستور  "stop" در ترمینالی که اسکریپت اجرا شده است وارد شود. بستن پنجره cmd باعث توقف لایو شما نخواهد شد. در صورتی که *اشتباها* پنجره ترمینال بسته اید مجددا آن را اجرا کرده و فرمان توقف را صادر نمایید.
 
-# Donate
-If you would like to donate to me because you find what I do useful and would like to support me, you can do so through this methods:
+# حمایت مالی
+در صورتی که این اسکریپت برایتان مفید واقع شد می توانید برای حمایت از توسعه دهندگان اصلی از راه‌های زیر اقدام کنید:
 
 Patreon: https://www.patreon.com/JRoy
 
