@@ -5,7 +5,7 @@ if (php_sapi_name() !== "cli") {
 
 logM("Loading InstagramLive-PHP v0.3...");
 set_time_limit(0);
-date_default_timezone_set('America/New_York');
+date_default_timezone_set('Asia/Tehran');
 
 //Load Depends from Composer...
 require __DIR__.'/vendor/autoload.php';
