@@ -1,11 +1,9 @@
 <div dir="rtl">اسکریپت PHP برای استریم مستقیم به لایو اینستاگرام از طریح هر برنامه ای که از RTMP پشتیبانی می کند!
 </div>
-<div dir="rtl"> InstagramLive-PHP </div>
+<div dir="rtl"> #InstagramLive-PHP </div>
 
-# Note
-This has been only tested on Windows, I have no clue if this works on UNIX-Based Systems. Feel free to try though!
-
-Additionally, I've only tested this in OBS. So I highly recommend using it
+<div dir="rtl"># Note
+در حال حاضر اجرای این اسکریپت فقط در ویندوز ۱۰ و استریم از طریق OBS تست شده است.
 
 # Setup
 If you are running this after the first setup, work from step six on...
@@ -45,3 +43,4 @@ PayPal.me: https://www.paypal.me/JoshuaRoy1
 
 Bitcoin: `32J2AqJBDY1VLq6wfZcLrTYS8fCcHHVDKD`
 
+</div>
