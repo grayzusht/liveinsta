@@ -1,6 +1,6 @@
 {
     "require": {
-        "grayzusht/instalive-api": "^1.0",
-        "react/child-process": "0.6.1"
+        "react/child-process": "^0.6.1",
+        "grayzusht/liveinsta-api": "^1.0"
     }
 }
