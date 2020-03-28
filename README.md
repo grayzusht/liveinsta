@@ -1,6 +1,6 @@
 <div dir="rtl">اسکریپت PHP برای استریم مستقیم به لایو اینستاگرام از طریح هر برنامه ای که از RTMP پشتیبانی می کند!
 </div>
-<h1 style="direction:rtl"> InstagramLive-PHP </h1>
+<div dir="rtl"> InstagramLive-PHP </div>
 
 # Note
 This has been only tested on Windows, I have no clue if this works on UNIX-Based Systems. Feel free to try though!
